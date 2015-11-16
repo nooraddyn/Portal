@@ -1,0 +1,28 @@
+
+1. Registration and Login
+
+a. Students who do not have an SRS account should be able to register. Only students
+registered as FS students should be allowed to create a SRS account. You may assume that all registered MNU students data is available for you. Hence, you do not need to show student registration process of MNU.
+b. Only SRS users should be able to view their accounts. They must not be allowed to access others accounts.
+c. A SRS user should be given three attempts to login in to the system. Upon three unsuccessful log in attempts, the account should be locked.
+
+2. Profile Management
+
+a. A SRS user should be able to update their profile. Only certain fields of your choice
+should be updatable. However, the updatable fields should be reasonable.
+b. A SRS user should be able to change their password. The password should have at least
+8 characters and should contain letters, numbers and special characters.
+
+3. Enrolment
+
+a. A SRS user should be able to view subjects which they are eligible to enrol for.
+b. A SRS user should be able to enrol at most four subjects per semester. Some subjects may have an entry criterion. For example, to enrol for the subject “Advanced
+Programming” the SRS user must have completed “Introduction to Programming”.
+c. A SRS user should be able to edit or cancel enrolments for which the enrolment
+deadline has not been reached or for which the enrolment has not been approved.
+d. View enrolment status messages.
+
+4. Searching
+
+a. A SRS user should be able to view their enrolment status and they should be able to
+search for enrolment history using a date range.
