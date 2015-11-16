@@ -6,6 +6,14 @@ registered as FS students should be allowed to create a SRS account. You may ass
 b. Only SRS users should be able to view their accounts. They must not be allowed to access others accounts.
 c. A SRS user should be given three attempts to login in to the system. Upon three unsuccessful log in attempts, the account should be locked.
 
+
+FS User
+id | username | password
+
+SRS
+id |username |password |login_attempts
+
+
 2. Profile Management
 
 a. A SRS user should be able to update their profile. Only certain fields of your choice
