@@ -5,6 +5,21 @@ $username= $_POST['username'];
 $password= $_POST['password'];
 $student_id= $_POST['student_id'];
 
+  //ALREADY REGISTERED CHECK
+  $query="SELECT * FROM srs_student WHERE (student_id ='$student_id') LIMIT 1";
+  $result_set=mysqli_query($con,$query);
+  $registration_check=mysqli_num_rows($result_set);
+  if ($registration_check!= 1){ 
+
+    $message= "You are already registered. Redirecting to Log In...";
+    echo $message;
+     header('Refresh:1;URL=../login.php');
+
+
+
+  }else{
+
+
 
   // MNU STUDENT CHECK
   $query="SELECT * FROM mnu_student WHERE (student_id ='$student_id') LIMIT 1";
@@ -40,7 +55,7 @@ $student_id= $_POST['student_id'];
       $message="SRS Student Created";
       echo $message;
 
-      header('Refresh: 0; URL=l../index.php');
+      header('Refresh: 0; URL=../index.php');
 
   
 
@@ -49,6 +64,7 @@ $student_id= $_POST['student_id'];
 
 
 
+  }
   }
   
 
