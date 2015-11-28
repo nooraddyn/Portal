@@ -34,7 +34,7 @@ $password= $_POST['password'];
 
     }else if($password_check!= 1){ 
 
-        $message= "You have entered a wrong password, Redirecting to Log In ".$login_attempts." times";
+        $message= "You have entered a wrong password,".$login_attempts." times. Redirecting to Log In...";
         echo $message;
         header('Refresh:1;URL=../login.php');
 
