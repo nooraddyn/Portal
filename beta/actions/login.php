@@ -31,6 +31,8 @@ $password= $_POST['password'];
     if($login_attempts==3){
       $message=" Your account has been locked";
       echo $message;
+      header('Refresh:1;URL=../login.php');
+
 
     }else if($password_check!= 1){ 
 
