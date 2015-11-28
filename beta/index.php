@@ -123,11 +123,14 @@ exit();}
   printf('<input type="hidden" name="student_id" value="'.$student_id.'">');
 
 
- $query="SELECT subjects.subject_id, subjects.name FROM subjects 
+ $query="SELECT subjects.subject_id, subjects.name FROM subjects
+INNER JOIN subjects_studied ON subjects_studied.subject_id = subjects.prerequisite
+UNION
+SELECT subjects.subject_id, subjects.name FROM subjects 
     LEFT JOIN subjects_studied ON subjects.subject_id=subjects_studied.subject_id
     LEFT JOIN srs_student ON subjects_studied.student_id=srs_student.student_id
-  WHERE srs_student.username != '$username' OR srs_student.username IS NULL 
-    ";
+  WHERE srs_student.username != 'baan' OR srs_student.username IS NULL  
+  AND subjects.prerequisite='0' ";
     $result = mysqli_query($con, $query);
     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
       $eligible_subjects[] = $row;
