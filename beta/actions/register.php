@@ -17,6 +17,8 @@ $student_id= $_POST['student_id'];
 
     $message= "Not a valid Student ID";
     echo $message;
+    header('Refresh:1;URL=../login.php');
+
 
 
 
@@ -31,6 +33,8 @@ $student_id= $_POST['student_id'];
 
       $message="Not a Faculty Science Student";
       echo $message;
+      header('Refresh:1;URL=../login.php');
+
 
     }else{
 
