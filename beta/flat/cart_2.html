@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<title>Flat form with Bootstrap 3</title>
+		
+		<!-- Optional - Google font -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Gafata" />
+		
+		<!-- Required - Icon font -->
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		
+		<!-- Required - Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" /> 
+		
+		<!-- Required - Form style -->
+		<link rel="stylesheet" href="css/flat-form.css" /> 
+		
+		<!-- NOT required - Page style -->
+		<link rel="stylesheet" href="css/page-style.css" /> 
+	</head>
+	
+	<body>
+		<div class="container">
+			<header class="header">
+				<h1>Flat form with Bootstrap 3</h1>
+			</header>
+			
+			<div class="content">
+				<aside class="col-sm-4 col-md-3 sidebar">
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="index.html">Registration form</a></li>
+						<li><a href="registration2.html">Registration simple form</a></li>
+						<li><a href="login.html">Login form</a></li>
+						<li><a href="forgot.html">Forgot password form</a></li>
+						<li><a href="subscribe.html">Subscribe form</a></li>
+						<li><a href="contact.html">Contact form</a></li>
+						<li><a href="review.html">Review form</a></li>
+						<li><a href="checkout.html">Checkout form</a></li>
+						<li class="active"><a href="cart_1.html">Shopping cart <span class="new">new</span></a></li>
+						<li><a href="multi.html">Form UI - multi column</a></li>
+						<li><a href="horizontal.html">Form UI - horizontal</a></li>
+					</ul>
+				</aside>
+				
+				<article class="col-sm-8 col-md-9">
+				
+					<h2>Shopping cart</h2>
+				
+					<!-- START Checkout form -->
+					
+					<!-- Cart steps -->
+					<div class="cart-steps">
+						<ul>
+							<li class="col-sm-3 active"><a href="cart_1.html"><span>1</span>Cart</a></li>
+							<li class="col-sm-3 active"><span>2</span>Datasheet</li>
+							<li class="col-sm-3"><span>3</span>Delivery and Payment</li>
+							<li class="col-sm-3"><span>4</span>Summary</li>
+						</ul>
+					</div>
+					
+					<!-- Alert -->
+					<!--<div class="alert alert-warning alert-dismissible" role="alert">
+						Please fill all the required fields.
+					</div>-->
+	
+					<form class="form-horizontal" method="post" role="form" action="cart_3.html">						
+						<!-- START Personal data -->
+						<fieldset>
+							<legend>Personal data</legend>
+							
+							<!-- First name -->
+							<div class="form-group">
+								<label for="firstname" class="col-sm-3 control-label">First name <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="firstname" />
+								</div>
+							</div>
+							
+							<!-- Last name -->
+							<div class="form-group">
+								<label for="lastname" class="col-sm-3 control-label">Last name <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="lastname" />
+								</div>
+							</div>
+							
+							<!-- Email -->
+							<div class="form-group">
+								<label for="email" class="col-sm-3 control-label">Email <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="email" />
+								</div>
+							</div>
+							
+							<!-- Mobile -->
+							<div class="form-group">
+								<label for="mobile" class="col-sm-3 control-label">Mobile <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="mobile" />
+								</div>
+							</div>
+						</fieldset>
+						<!-- END Personal data -->
+						
+						
+						<!-- START Delivery data -->
+						<fieldset>
+							<legend>Delivery data</legend>	
+							<!-- Company name -->
+							<div class="form-group">
+								<label for="company" class="col-sm-3 control-label">Company</label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="company" />
+								</div>
+							</div>
+							
+							<!-- Address -->
+							<div class="form-group">
+								<label for="address" class="col-sm-3 control-label">Address <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="address" />
+								</div>
+							</div>
+							
+							<!-- Country -->
+							<div class="form-group">
+								<label for="country" class="col-sm-3 control-label">Country <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<select class="custom-select" id="country">
+										<option value="0">- Select country -</option>
+										<option value="1">Country 1</option>
+										<option value="2">Country 2</option>
+										<option value="3">Country 3</option>
+									</select>
+								</div>
+							</div>
+							
+							<!-- State -->
+							<div class="form-group">
+								<label for="state" class="col-sm-3 control-label">State <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<select class="custom-select" id="state">
+										<option value="0">- Select state -</option>
+										<option value="1">State 1</option>
+										<option value="2">State 2</option>
+										<option value="3">State 3</option>
+									</select>
+								</div>
+							</div>
+							
+							<!-- City -->
+							<div class="form-group">
+								<label for="city" class="col-sm-3 control-label">City <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<select class="custom-select" id="city">
+										<option value="0">- Select city -</option>
+										<option value="1">City 1</option>
+										<option value="2">City 2</option>
+										<option value="3">City 3</option>
+									</select>
+								</div>
+							</div>
+							
+							<!-- Zip code -->
+							<div class="form-group">
+								<label for="zipcode" class="col-sm-3 control-label">Zip Code <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="zipcode" />
+								</div>
+							</div>
+							
+							<!-- Billing checkbox -->
+							<div class="form-group">
+								<div class="col-md-9 col-sm-12 col-md-offset-3 checkbox">
+									<label class="custom-option toggle" data-off="OFF" data-on="ON">
+										<input type="checkbox" id="invoicesame" name="invoicesame" value="1" checked="checked" />
+										<span class="button-checkbox"></span>
+									</label>
+									<label for="invoicesame">Invoice data is the same as the delivery data</label>
+								</div>
+							</div>
+						</fieldset>
+						<!-- END Delivery data-->
+						
+						<!-- START Invoice data -->
+						<fieldset id="invoicedata" class="hidden">
+							<legend>Invoice data</legend>
+							
+							<!-- First name -->
+							<div class="form-group">
+								<label for="firstname2" class="col-sm-3 control-label">First name <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="firstname2" />
+								</div>
+							</div>
+							
+							<!-- Last name -->
+							<div class="form-group">
+								<label for="lastname2" class="col-sm-3 control-label">Last name <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="lastname2" />
+								</div>
+							</div>
+							
+							<!-- Company name -->
+							<div class="form-group">
+								<label for="companyname2" class="col-sm-3 control-label">Company name</label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="companyname2" />
+								</div>
+							</div>
+							
+							<!-- Company number -->
+							<div class="form-group">
+								<label for="companynumber2" class="col-sm-3 control-label">Company number</label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="companynumber2" />
+								</div>
+							</div>
+							
+							<!-- Tax code -->
+							<div class="form-group">
+								<label for="taxcode2" class="col-sm-3 control-label">Tax code</label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="taxcode2" />
+								</div>
+							</div>
+							
+							<!-- Address -->
+							<div class="form-group">
+								<label for="address2" class="col-sm-3 control-label">Address <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="address2" />
+								</div>
+							</div>
+							
+							<!-- Country -->
+							<div class="form-group">
+								<label for="country2" class="col-sm-3 control-label">Country <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<select class="custom-select" id="country2">
+										<option value="0">- Select country -</option>
+										<option value="1">Country 1</option>
+										<option value="2">Country 2</option>
+										<option value="3">Country 3</option>
+									</select>
+								</div>
+							</div>
+							
+							<!-- State -->
+							<div class="form-group">
+								<label for="state2" class="col-sm-3 control-label">State <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<select class="custom-select" id="state2">
+										<option value="0">- Select state -</option>
+										<option value="1">State 1</option>
+										<option value="2">State 2</option>
+										<option value="3">State 3</option>
+									</select>
+								</div>
+							</div>
+							
+							<!-- City -->
+							<div class="form-group">
+								<label for="city2" class="col-sm-3 control-label">City <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<select class="custom-select" id="city2">
+										<option value="0">- Select city -</option>
+										<option value="1">City 1</option>
+										<option value="2">City 2</option>
+										<option value="3">City 3</option>
+									</select>
+								</div>
+							</div>
+							
+							<!-- Zip code -->
+							<div class="form-group">
+								<label for="zipcode2" class="col-sm-3 control-label">Zip Code <span class="required-field">*</span></label>
+								<div class="col-sm-9 col-md-6">
+									<input type="text" class="form-control" id="zipcode2" />
+								</div>
+							</div>
+						</fieldset>
+						<!-- END Invoice data-->
+
+						<!-- Price list -->
+						<div class="row price-list">
+							<ul class="col-md-6 col-md-offset-6 list-unstyled">
+								<li class="row">
+									<span class="col-xs-6">Product price:</span>
+									<span class="col-xs-6">500$</span>
+								</li>
+								<li class="row">
+									<span class="col-xs-6">Delivery price:</span>
+									<span class="col-xs-6">10$</span>
+								</li>
+								<li class="row strong">
+									<span class="col-xs-6">Subtotal:</span>
+									<span class="col-xs-6">510$</span>
+								</li>
+							</ul>
+						</div>
+						
+						<!-- Back and continue button -->
+						<div class="row">
+							<div class="col-md-6 col-sm-12">
+								<a href="cart_1.html" class="btn btn-default">Back to cart</a>
+							</div>
+							<div class="col-md-6 col-sm-12 text-right">
+								<button type="submit" class="btn btn-primary">Go to delivery and payment</button>
+							</div>
+						</div>
+					</form>
+					
+					<!-- END Checkout form -->
+					
+				</article>
+				
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		
+		<!-- Required - jQuery -->
+		<script src="js/jquery-2.1.1.min.js"></script>
+		
+		<!-- Required - Bootstrap JS -->
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- Required - Custom select -->
+		<script src="js/fancySelect.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+				$('.custom-select').fancySelect(); // Custom select
+				$('[data-toggle="tooltip"]').tooltip() // Tooltip
+				
+				// Billing info show/hide
+				$('#invoicesame').change(function(){
+					if(this.checked) {
+						$('#invoicedata').addClass('hidden');
+					}
+					else {
+						$('#invoicedata').removeClass('hidden');
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
