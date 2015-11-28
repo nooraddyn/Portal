@@ -14,6 +14,8 @@ $password= $_POST['password'];
 
     $message= "Not a valid SRS Student Username";
     echo $message;
+     header('Refresh:1;URL=../login.php');
+
 
 
   }else{
@@ -32,8 +34,10 @@ $password= $_POST['password'];
 
     }else if($password_check!= 1){ 
 
-        $message= "You have entered a wrong password ".$login_attempts." times";
+        $message= "You have entered a wrong password, Redirecting to Log In ".$login_attempts." times";
         echo $message;
+        header('Refresh:1;URL=../login.php');
+
 
           $query="UPDATE srs_student SET login_attempts = login_attempts + 1 WHERE username = '$username'";
           $result_set=mysqli_query($con,$query);
